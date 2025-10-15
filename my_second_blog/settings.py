@@ -80,9 +80,14 @@ WSGI_APPLICATION = 'my_second_blog.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default":{
+        "ENGINE": "django.db.backends.postgresql",
+        "OPTIONS":{
+            "service": "my_service",
+            # this line defaults to "%APPDATA%\postgresql\pgpass.conf"
+            # so the only thing that is required is to create the above file
+            # "passfile": ".my_pgpass",
+        },
     }
 }
 
@@ -111,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kyiv'
 
 USE_I18N = True
 
