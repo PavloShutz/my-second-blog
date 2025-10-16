@@ -83,10 +83,10 @@ DATABASES = {
     "default":{
         "ENGINE": "django.db.backends.postgresql",
         "OPTIONS":{
-            "service": "my_service",
+            "service": "second_blog_service",
             # this line defaults to "%APPDATA%\postgresql\pgpass.conf"
             # so the only thing that is required is to create the above file
-            # "passfile": ".my_pgpass",
+            # "passfile": ".pgpass",
         },
     }
 }
