@@ -86,7 +86,7 @@ DATABASES = {
             "service": "second_blog_service",
             # this line defaults to "%APPDATA%\postgresql\pgpass.conf"
             # so the only thing that is required is to create the above file
-            # "passfile": ".pgpass",
+            "passfile": ".my_pgpass",
         },
     }
 }
