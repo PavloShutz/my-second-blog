@@ -36,11 +36,11 @@ In [settings.py](my_second_blog/settings.py), you should do the following:
    ```
    - Paste the key and set `SECRET_KEY`.
 ## PostgreSQL
-> ![IMPORTANT]
+> [!IMPORTANT]
 > You need to have PostgreSQL installed on your machine to proceed.
 > Use https://neon.com/postgresql/tutorial, for example, to do basic setup.
 
-> ![NOTE]
+> [!NOTE]
 > We assume that the username is `postgres`. Replace it, if required, by that
 > that you provided in the installation.
 
