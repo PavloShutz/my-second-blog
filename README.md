@@ -42,7 +42,7 @@ In [settings.py](my_second_blog/settings.py), you should do the following:
 
 > [!NOTE]
 > We assume that the username is `postgres`. Replace it, if required, by that
-> that you provided in the installation.
+> that you provided during the installation.
 
 Follow the next steps to properly configure your database:
 1) Create a database:\
