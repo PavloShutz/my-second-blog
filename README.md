@@ -18,8 +18,8 @@ Install required libraries/tools:
 pip install -r requirements.txt
 ```
 ## Configurations
-In [settings.py](my_second_blog/settings.py), you should do the following:
-1) Create `.env` file and add this variable:
+Provide `SECRET_KEY` for your app:
+1) Create `.env` file next to [manage.py](manage.py) and add this variable:
    ```dotenv
     SECRET_KEY=""
     ```
@@ -57,7 +57,8 @@ Follow the next steps to properly configure your database:
     ```
 2) Create `.my_pgpass` file next to [manage.py](manage.py) file:
    ```
-   hostname:port:database:username:password
+   # hostname:port:database:username:password
+   localhost:5432:secondblogdb:postgres:your_postgres_password
    ```
 3) Create `%APPDATA%\postgresql\.pg_service.conf` and paste the following there:
    ```
