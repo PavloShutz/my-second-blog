@@ -1,4 +1,5 @@
 # Installation
+
 ## Initial setup
 Clone the repository:
 ```
@@ -17,13 +18,14 @@ Install required libraries/tools:
 ```
 pip install -r requirements.txt
 ```
+
 ## Configurations
 In [settings.py](my_second_blog/settings.py), you should do the following:
 1) Create `.env` file and add this variable:
    ```dotenv
     SECRET_KEY=""
     ```
-2) In terminal:
+2) In the terminal:
    - Start django's shell:
    ```commandline
     python manage.py shell
@@ -35,6 +37,7 @@ In [settings.py](my_second_blog/settings.py), you should do the following:
    some_random_secret_key
    ```
    - Paste the key and set `SECRET_KEY`.
+
 ## PostgreSQL
 > [!IMPORTANT]
 > You need to have PostgreSQL installed on your machine to proceed.
@@ -46,7 +49,7 @@ In [settings.py](my_second_blog/settings.py), you should do the following:
 
 Follow the next steps to properly configure your database:
 1) Create a database:\
-    In terminal:
+    In the terminal:
     ```commandline
     chcp 1251
     psql -U postgres
