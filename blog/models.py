@@ -7,9 +7,9 @@ class Post(models.Model):
     post_text = models.TextField(help_text="Here comes your magic...")
     likes = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
-    pub_date = models.DateTimeField("date published")
     cr_date = models.DateTimeField("date created")
-    edit_date = models.DateTimeField("date edited")
+    pub_date = models.DateTimeField("date published", blank=True, null=True)
+    edit_date = models.DateTimeField("date edited", blank=True, null=True)
 
     def __str__(self):
         return self.post_title
