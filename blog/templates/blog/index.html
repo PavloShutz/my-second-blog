@@ -2,9 +2,9 @@
 {% if post_list.count < 1 %}
         <h2><strong>Oops, nothing here!</strong></h2>
 {% else %}
-<ol>
-    {% for post in post_list %}
-        <li><a href="{% url 'blog:details' post.pk %}">{{ post.post_title }}</a></li>
-    {% endfor %}
-</ol>
+{% for post in post_list %}
+    <article class="post-entry">
+        <h2><a href="{% url 'blog:details' post.pk %}">{{ post.post_title }}</a></h2>
+    </article>
+{% endfor %}
 {% endif %}
