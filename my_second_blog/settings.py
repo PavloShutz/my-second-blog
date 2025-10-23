@@ -82,10 +82,6 @@ WSGI_APPLICATION = 'my_second_blog.wsgi.application'
 DATABASES = {
     "default":{
         "ENGINE": "django.db.backends.postgresql",
-        # The following options are needed for a test framework.
-        "USER": "postgres",
-        "NAME": "secondblogdb",
-        "PASSWORD": "1234",
         "OPTIONS":{
             "service": "second_blog_service",
             # this line defaults to "%APPDATA%\postgresql\pgpass.conf"
