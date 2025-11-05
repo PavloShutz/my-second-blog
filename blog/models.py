@@ -10,6 +10,7 @@ class Post(models.Model):
     cr_date = models.DateTimeField("date created")
     pub_date = models.DateTimeField("date published", blank=True, null=True)
     edit_date = models.DateTimeField("date edited", blank=True, null=True)
+    title_image = models.ImageField(upload_to="post_title_images", default='placeholder.png')
 
     def __str__(self):
         return self.post_title
