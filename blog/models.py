@@ -1,12 +1,13 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 
 # Text, title, author, likes, dislikes
 # Published date, created date, edited date
 class Post(models.Model):
     post_title = models.CharField(max_length=200)
     post_text = models.TextField(help_text="Here comes your magic...")
-    likes = models.IntegerField(default=0)
-    dislikes = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0, validators=[MinValueValidator(0)])
+    dislikes = models.IntegerField(default=0, validators=[MinValueValidator(0)])
     cr_date = models.DateTimeField("date created")
     pub_date = models.DateTimeField("date published", blank=True, null=True)
     edit_date = models.DateTimeField("date edited", blank=True, null=True)
